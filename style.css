@@ -1,0 +1,461 @@
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+body{
+
+    width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    font-family:Arial,Helvetica,sans-serif;
+
+    background:linear-gradient(135deg,#0F172A,#1E293B,#111827);
+
+}
+
+.loader{
+
+    width:90%;
+
+    max-width:400px;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+
+h1{
+
+    margin-top:25px;
+
+    font-size:30px;
+
+}
+
+p{
+
+    margin-top:15px;
+
+    opacity:.8;
+
+    font-size:18px;
+
+}
+
+.barra{
+
+    width:100%;
+
+    height:10px;
+
+    background:#334155;
+
+    margin-top:35px;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+}
+
+.progreso{
+
+    width:0%;
+
+    height:100%;
+
+    background:#F43F5E;
+
+    animation:cargar 4s linear forwards;
+
+}
+
+@keyframes cargar{
+
+    from{
+
+        width:0%;
+
+    }
+
+    to{
+
+        width:100%;
+
+    }
+
+}
+
+@keyframes latido{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.25);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+/* estilo de la pagina de login */
+.fondo{
+
+position:fixed;
+
+width:100%;
+
+height:100%;
+
+background:linear-gradient(145deg,#0f172a,#1e293b,#111827);
+
+z-index:-1;
+
+}
+
+.contenedor{
+
+width:90%;
+
+max-width:380px;
+
+padding:35px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+border-radius:25px;
+
+text-align:center;
+
+box-shadow:0 20px 50px rgba(0,0,0,.4);
+
+animation:subir .8s;
+
+}
+
+.icono{
+
+font-size:70px;
+
+margin-bottom:20px;
+
+animation:latido 1s infinite;
+
+}
+
+.contenedor h1{
+
+color:white;
+
+margin-bottom:15px;
+
+}
+
+.contenedor p{
+
+color:#d1d5db;
+
+margin-bottom:20px;
+
+line-height:1.6;
+
+}
+
+input{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:12px;
+
+font-size:18px;
+
+outline:none;
+
+margin-bottom:20px;
+
+}
+
+button{
+
+width:100%;
+
+padding:15px;
+
+border:none;
+
+border-radius:12px;
+
+background:#f43f5e;
+
+color:white;
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+background:#fb7185;
+
+}
+
+#mensaje{
+
+margin-top:20px;
+
+font-weight:bold;
+
+min-height:40px;
+
+}
+
+@keyframes subir{
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/*estilo del sobre*/
+.bodySobre{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+background:linear-gradient(135deg,#0f172a,#1e293b,#111827);
+overflow:hidden;
+}
+.contenidoSobre{
+text-align:center;
+color:white;
+}
+#saludo{
+margin-bottom:15px;
+font-size:32px;
+}
+.textoPulsa{
+margin-top:25px;
+font-size:20px;
+opacity:.8;
+animation:parpadear 2s infinite;
+}
+.sobre{
+width:280px;
+height:180px;
+background:#f963af;
+position:relative;
+margin:15px auto;
+cursor:pointer;
+border-radius:8px;
+box-shadow:0 20px 40px rgba(0,0,0,.4);
+animation:caer 2s;
+}
+.tapa{
+position:absolute;
+width:100%;
+height:90px;
+background:#d5408e;
+clip-path:polygon(0 0,100% 0,50% 100%);
+transform-origin:top;
+transition:1s;
+z-index:5;
+}
+.papel{
+position:absolute;
+left:15px;
+bottom:0;
+width:250px;
+height:150px;
+background: #ffa0cd;
+border-radius:8px;
+transition:1.2s;
+}
+.sobre.abierto .tapa{
+transform:rotateX(180deg);
+}
+.sobre.abierto .papel{
+transform:translateY(-140px);
+}
+@keyframes caer{
+0%{
+opacity:0;
+transform:translateY(-500px);
+}
+100%{
+opacity:1;
+transform:translateY(0);
+}
+}
+@keyframes parpadear{
+50%{
+opacity:.3;
+}
+}
+/*carta*/
+.bodyCarta{
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:linear-gradient(135deg,#0f172a,#1e293b,#111827);
+
+overflow:hidden;
+
+font-family:Arial,Helvetica,sans-serif;
+
+}
+
+.carta{
+
+width:90%;
+
+max-width:500px;
+
+padding:40px;
+
+background:white;
+
+border-radius:20px;
+
+box-shadow:0 20px 60px rgba(0,0,0,.5);
+
+text-align:center;
+
+animation:subir 1s;
+
+}
+
+.carta h1{
+
+font-size:60px;
+
+}
+
+.carta h2{
+
+margin:20px 0;
+
+color:#e11d48;
+
+}
+
+.carta p{
+
+line-height:2;
+
+font-size:18px;
+
+min-height:240px;
+
+white-space:pre-line;
+
+}
+/*
+#continuar{
+
+margin-top:25px;
+
+padding:15px 35px;
+
+background:#e11d48;
+
+color:white;
+
+border:none;
+
+border-radius:10px;
+
+font-size:18px;
+
+cursor:pointer;
+
+display:none;
+
+}
+*/
+@keyframes subir{
+
+from{
+
+opacity:0;
+
+transform:translateY(100px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+/*estilo de la pagina de preguntas*/
+#contenedor-opciones input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    outline: none;
+    margin-bottom: 10px;
+    background: #ffffff;
+}
